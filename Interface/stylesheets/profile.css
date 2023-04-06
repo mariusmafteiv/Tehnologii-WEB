@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Viga", sans-serif;
+}
+
+/* body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("bg2.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+} */
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    padding: .5em 10em;
+    /* Next to disabled for transparent upper*/
+    background: white;
+    border-bottom: .2em solid #3F3F3F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.name{
+    font-size: 1.5em;
+    color: black;
+    user-select: none;
+    margin-right: 21.5em;
+}
+
+.logo{
+    width: 4.5%;
+    height: 4.5%;
+    user-select: none;
+}
+
+.navbar a{
+    position: relative;
+    font-size: 1.1em;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navbar a::after{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: -0.3em;
+    width: 100%;
+    height: 3px;
+    background: black;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transform-origin: left; /* we can change where to start the animation */
+    transition: transform .5s;
+}
+
+.navbar a:hover::after{
+    transform-origin: right;
+    transform: scaleX(1);
+}
+
+.navbar .login-btn{
+    width: 100px;
+    height: 40px;
+    background:transparent;
+    border: 2px solid #3F3F3F;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color:black;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+.navbar .login-btn:hover{
+    background: #3F3F3F;
+    color:white;
+}
