@@ -92,3 +92,54 @@ header{
     background: #3F3F3F;
     color:white;
 }
+
+.container{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.left-container .logo{
+    width: 400px;
+    height: 400px;
+    margin-right: 10em;
+    margin-top: 5em;
+}
+
+.right-container{
+    position: relative;
+    float: right;
+    right: inherit;
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    display: absolute;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+
+    background: transparent;
+    backdrop-filter: blur(1px);
+    bottom: -3em;
+
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.right-container::-webkit-scrollbar { 
+    width: 0;
+    height: 0;
+}
+
+.right-container h2{
+    color:white;
+    font-weight: 150;
+}
+
+.container h2{
+
+}
