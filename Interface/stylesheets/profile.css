@@ -7,15 +7,15 @@
     font-family: "Viga", sans-serif;
 }
 
-/* body{
+body{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url("bg2.jpg") no-repeat;
+    background: url("/assets/bg2.jpg") no-repeat;
     background-size: cover;
     background-position: center;
-} */
+}
 
 header{
     position: fixed;
@@ -91,4 +91,132 @@ header{
 .navbar .login-btn:hover{
     background: #3F3F3F;
     color:white;
+}
+
+.profile {
+    position: relative;
+    float: left;
+    width: 200px;
+    height: 200px;
+    display: absolute;
+
+    background: url("/assets/avatar.png") no-repeat;
+    border: .1em solid black;
+    border-radius: 50%;
+    backdrop-filter: blur(1px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+  }
+
+.content .information-table{
+    position: relative;
+    float: right;
+    width: 600px;
+    height: 250px;
+    display: absolute;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(180, 180, 180, .75);
+    border: .1em solid black;
+    border-radius: 1em;
+    backdrop-filter: blur(1px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+}
+
+.username{
+    position: absolute;
+}
+
+.information-table h2{
+    font-size: 2em;
+    color: #3F3F3F;
+    text-align: center;
+    display: inline-block;
+    margin: 0.5em 1.25em;
+    margin-right: -1em;
+}
+
+
+.details{
+    position: absolute;
+    top: 4.5em;
+}
+
+.information-table h1{
+    padding: 0.4em 1em;
+    font-size: 1.25em;
+    color: black;
+    font-weight: 50;
+    font-family: Arial;
+    justify-content: space-between;
+    user-select: none;
+}
+
+
+.problems-container{
+    position: relative;
+    float: right;
+    right: inherit;
+    width: 100%;
+    max-width: 1200px;
+    height: 300px;
+    display: absolute;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(180, 180, 180, .75);
+    border: .1em solid black;
+    border-radius: 1em;
+    backdrop-filter: blur(1px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    user-select: none;
+    bottom: -3em;
+
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.problems-container::-webkit-scrollbar { 
+    width: 0;
+    height: 0;
+}
+.problems-container h2{
+    background-size: cover;
+    background-color: rgba(180, 180, 180, .75);;
+    width: 100%;
+    font-size: 2em;
+    color: #3F3F3F;
+    text-align: center;
+    display: inline-block;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+.content .profile{
+    top: 2em;
+    left: 3em;
+}
+
+.content .information-table{
+    top: 1em;
+    left: -5%;
+}
+
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+  
+.list-item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+  
+.list-item:last-child {
+    border-bottom: none;
 }
