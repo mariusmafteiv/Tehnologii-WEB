@@ -6,98 +6,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>navbar</title>
     <link rel="stylesheet" href="stylesheets/navbar.css">
+    <!-- followin link is for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <nav>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-            <i class="fa fa-bars"></i>
-        </label>
-        <label class="logo">PrInfo</label>
-        <ul>
-            <li class="button"><a href="#"></a>Home</li>
-            <li class="button"><a href="#"></a>Profile</li>
-            <li class="button"><a href="#"></a>My Classes</li>
-            <li class="button"><a href="#"></a>Work</li>
-            <li><button class="login-btn">Login</button></li>
-        </ul>
-    </nav>
-    <div class="wrapper">
-        <span class="icon-close">
-            <ion-icon name="close"></ion-icon>
-        </span>
-        <div class="form-box login">
-            <h2>Login</h2>
-            <form action="#">
-                <div class="input-box">
-                    <span class="icon">
-                        <ion-icon name="mail"></ion-icon>
-                    </span>
-                    <input type="email" required>
-                    <label>Email</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon">
-                        <ion-icon name="lock-closed"></ion-icon>
-                    </span>
-                    <input type="password" required>
-                    <label>Password</label>
-                </div>
-                <div class="remember-forgot">
-                    <label><input type="checkbox">Remember me</label>
-                    <a href="#">Forgot Password?</a>
-                </div>
-                <button type="submit" class="btn">Login</button>
-                <div class="login-register">
-                    <p>Don't have an account?<a href="#" class="register-link">Register</a></p>
-                </div>
-            </form>
+    <header>
+        <div class="navbar">
+            <div class="logo"><h2>PrInfo</h2></div>
+            <ul class="links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Classes</a></li>
+                <li><a href="#">Work</a></li>
+            </ul>
+            <a href="#" class="login-btn">Login</a>
+            <div class="toggle-btn">
+                <i class="fa fa-bars"></i>
+            </div>
         </div>
+        <div class="dropdown-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Classes</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#" class="dm-login-btn">Login</a></li>
+        </div>  
+    </header>
+    <section id="login-reg-form">
+        <div class="wrapper">
+            <span class="icon-close">
+                <ion-icon name="close"></ion-icon>
+            </span>
+            <div class="form-box login">
+                <h2>Login</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="mail"></ion-icon>
+                        </span>
+                        <input type="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="lock-closed"></ion-icon>
+                        </span>
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        <label><input type="checkbox">Remember me</label>
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                    <div class="login-register">
+                        <p>Don't have an account?<a href="#" class="register-link">Register</a></p>
+                    </div>
+                </form>
+            </div>
 
-        <div class="form-box register">
-            <h2>Registration</h2>
-            <form action="#">
-                <div class="input-box">
-                    <span class="icon">
-                        <ion-icon name="person"></ion-icon>
-                    </span>
-                    <input type="text" required>
-                    <label>Name</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon">
-                        <ion-icon name="person"></ion-icon>
-                    </span>
-                    <input type="text" required>
-                    <label>Surname</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon">
-                        <ion-icon name="mail"></ion-icon>
-                    </span>
-                    <input type="email" required>
-                    <label>Email</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon">
-                        <ion-icon name="lock-closed"></ion-icon>
-                    </span>
-                    <input type="password" required>
-                    <label>Password</label>
-                </div>
-                <div class="remember-forgot">
-                    <label><input type="checkbox">Professor account</label>
-                </div>
-                <button type="submit" class="btn">Register</button>
-                <div class="login-register">
-                    <p>Already have an account?<a href="#" class="login-link">Log In</a></p>
-                </div>
-            </form>
+            <div class="form-box register">
+                <h2>Registration</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="person"></ion-icon>
+                        </span>
+                       <input type="text" required>
+                        <label>Name</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="person"></ion-icon>
+                        </span>
+                        <input type="text" required>
+                        <label>Surname</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="mail"></ion-icon>
+                        </span>
+                        <input type="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="lock-closed"></ion-icon>
+                        </span>
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        <label><input type="checkbox">Professor account</label>
+                    </div>
+                    <button type="submit" class="btn">Register</button>
+                    <div class="login-register">
+                        <p>Already have an account?<a href="#" class="login-link">Log In</a></p>
+                    </div>
+                </form>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <script src="script.js"></script>
+    <script src="navbar.js"></script>
     <!-- Following scripts are for icons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

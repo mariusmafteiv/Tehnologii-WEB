@@ -5,19 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheets/profile.css">
+    <link rel="stylesheet" href="stylesheets/navbar.css">
     <title>Profile</title>
+    <!-- followin link is for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
-        <img class="logo", src="assets/logo.png" />
-        <h2 class="name">PrInfo v2</h2>
-        <nav class="navbar">
-            <a href="#">Home</a>
-            <a href="#">Profile</a>
-            <a href="#">My Classes</a>
-            <a href="#">Work</a>
-            <button class="login-btn">Logout</button>
-        </nav>
+        <div class="navbar">
+            <div class="logo"><a href="#">PrInfo</a></div>
+            <ul class="links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Classes</a></li>
+                <li><a href="#">Work</a></li>
+            </ul>
+            <a href="#" class="login-btn">Login</a>
+            <div class="toggle-btn">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Classes</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#" class="dm-login-btn">Login</a></li>
+        </div>  
     </header>
     <div class="content">
         <span class="profile picture"></span>
@@ -54,5 +68,9 @@
             </ul>
           </div>
     </div>
+    <script src="navbar.js"></script>
+    <!-- Following scripts are for icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
