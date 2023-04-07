@@ -97,7 +97,7 @@ header{
 
 /* Responsive part */
 
-@media (max-width: 992px){
+@media (min-width:577px) and (max-width: 992px){
     .navbar .links,
     .navbar .login-btn{
         display: none;
@@ -109,12 +109,24 @@ header{
 
     .dropdown-menu{
         display: block;
-        z-index: 2;
+        z-index: 1;
     }
-
 }
 
 @media (max-width: 576px){
+    .navbar .links,
+    .navbar .login-btn{
+        display: none;
+    }
+
+    .navbar .toggle-btn{
+        display: block;
+    }
+
+    .dropdown-menu{
+        display: block;
+        z-index: 1;
+    }
     .dropdown-menu{
         left: 2rem;
         width: unset;
