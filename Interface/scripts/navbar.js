@@ -31,19 +31,6 @@ loginBtn.addEventListener('click', ()=> {
     wrapper.classList.add('on-login');
 });
 
-iconClose.addEventListener('click', ()=> {
-    wrapper.classList.remove('on-login');
-    wrapper.classList.remove('on-register');
-});
-
-registerLink.addEventListener('click', ()=> {
-    wrapper.classList.add('on-register');
-});
-
-loginLink.addEventListener('click', ()=> {
-    wrapper.classList.remove('on-register');
-});
-
 dmloginBtn.addEventListener('click', ()=> {
     wrapper.classList.add('on-login');
     toggleBtn.click();

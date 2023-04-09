@@ -95,54 +95,6 @@ header{
     height: 240px;
 }
 
-/* Responsive part */
-
-@media (min-width:577px) and (max-width: 992px){
-    .navbar .links,
-    .navbar .login-btn{
-        display: none;
-    }
-
-    .navbar .toggle-btn{
-        display: block;
-    }
-
-    .dropdown-menu{
-        display: block;
-        z-index: 1;
-    }
-}
-
-@media (max-width: 576px){
-    .navbar .links,
-    .navbar .login-btn{
-        display: none;
-    }
-
-    .navbar .toggle-btn{
-        display: block;
-    }
-
-    .dropdown-menu{
-        display: block;
-        z-index: 1;
-    }
-    .dropdown-menu{
-        left: 2rem;
-        width: unset;
-        z-index: 2;
-    }
-
-    /* section#login-reg-form{
-        height: calc(100vh - 60px);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    } */
-}
-
 /* buttons */
 
 .login-btn{
@@ -372,4 +324,52 @@ section#login-reg-form{
 
 .login-register p a:hover{
     text-decoration: underline;
+}
+
+/* Responsive part */
+
+@media (min-width:577px) and (max-width: 992px){
+    .navbar .links,
+    .navbar .login-btn{
+        display: none;
+    }
+
+    .navbar .toggle-btn{
+        display: block;
+    }
+
+    .dropdown-menu{
+        display: block;
+        z-index: 1;
+    }
+}
+
+@media (max-width: 576px){
+    .navbar .links,
+    .navbar .login-btn{
+        display: none;
+    }
+
+    .navbar .toggle-btn{
+        display: block;
+    }
+
+    .dropdown-menu{
+        display: block;
+        z-index: 1;
+    }
+    .dropdown-menu{
+        left: 2rem;
+        width: unset;
+        z-index: 2;
+    }
+
+    /* section#login-reg-form{
+        height: calc(100vh - 60px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    } */
 }
