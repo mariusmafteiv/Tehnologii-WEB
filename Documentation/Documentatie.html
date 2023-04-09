@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Documentatie HTML</title>
+  <link rel="stylesheet" href="Documentatie.css">
+</head>
+
+<body prefix="schema: http://schema.org">
+
+  <div class="titlee"> DOCUMENTATIE INFORMATIX</div>
+
+  <section id="introduction" role="doc-introduction">
+    <h2>Introducere</h2>
+    <p>
+      Să se implementeze o aplicație web destinată elevilor de liceu ce are ca scop învățarea programării prin
+      intermediul de probleme.
+      Problemele informatice vor fi propuse de anumite clase de utilizatori (profesorii) și vor fi aprobate de către
+      administratori.
+      O problemă poate avea anumite TAG-uri (ca de exemplu: usoara/medie/grea, capitolul informatic din care face parte
+      e.g programare dinamica, bkt, etc.)
+      Profesorii vor putea construi clase și adăuga elevii (care au deja cont) în aceste clase în baza unor
+      identificatori (email, username, etc.).
+      De asemenea, profesorii vor putea da teme fie propunând probleme fie alegând din mulțimea de probleme existente.
+      Elevii vor putea să rezolve probleme și să trimită soluțiile lor pentru o evaluare realizată de către profesor,
+      vor putea comenta la o anumita problema pentru a oferi ponturi colegilor sau marca problemele cu un număr de stele
+      (1-5).
+      Problemele vor putea fi accesibile altor aplicații web prin intermediul unui API (REST/GraphQL).
+      De asemenea o problema poate fi exportata/importată într-un format open (XML / JSON / CSV, etc.)
+      Se vor construi rapoarte oferind statistici pentru utilizator (cate probleme a trimis, cate sunt corecte, etc.)
+      si rapoarte privitoare la fiecare problema (cati utilizatori au incercat-o, cati au reusit sa o faca, etc.).
+    </p>
+  </section>
+
+  <section id="structure">
+    <h2>Structura</h2>
+    <p>
+      Site-ul contine 8 pagini html. Paginile asigura o functionare perfect normala si ofera o interfata placuta si
+      comfortabila.
+      Navigatia se face usor de la o pagina la alta folosind o bara de navigatie care sta intotdeauna in partea de sus a
+      paginii.
+      Paginile si functionalitatile lor sunt explicate mai jos.
+    </p>
+
+    <section id="home.html">
+      <h3><code>home.html</code></h3>
+      <p>
+        Pagina home este prima pagina pe care o intapina utilizatorul. Aceasta contine o imagine de fundal si textul
+        "Welcome" deoarece toata lumea este bine venita!
+        Pagina nu arata prea multe, este doar o pagina de inceput.
+      </p>
+    </section>
+
+    <section id="connection.html">
+      <h3><code>connection.html</code></h3>
+      <p>
+        Connection este pagina prin care utilizatorul poate sa-si creeze un cont sau poate sa intre intr-un cont deja
+        facut. Ca functionalitati pagina ofera input-boxes
+        care permit utilizatorului sa scrie. Daca ti-ai uitat parola poti apasa pe butonul "Forgot password", iar daca
+        vrei sa o inchizi poti apasa pe butonul din dreapta sus
+        in forma de X.
+      </p>
+    </section>
+
+    <section id="myclasses.html">
+      <h3><code>myclasses.html</code></h3>
+      <p>
+        Pagina mycalsses este pagina pentru clasele in care te afli. Aici poti sa vezi toate clasele in care esti
+        impreuna cu cateva detalii, precum: numele clasei, cine a creat
+        clasa, cand a creat-o si cati membri sunt in clasa. Butonul din stanga paginii, denumit New Class, ofera
+        posibilitatea de a crea o noua clasa, afisand un pop-up in care
+        trebuie sa introduci informatiile clasei: numele clasei pe care vrei sa o creezi, profesorii care vor intretine
+        clasa respectiva si studentii care vor fi in ea.
+        De asemenea, fiecare clasa contine un buton care te duce la clasa respectiva, o pagina denumita
+        selectedClass.html unde sunt informatii mai in detaliu despre clasa, precum
+        numele membrilor din clasa, fie ca sunt studenti sau profesori si problemele rezolvate de clasa respectiva
+        impreuna cu tagurile problemei si dificultatea acesteia.
+      </p>
+    </section>
+
+    <section id="navbar.html">
+      <h3><code>navbar.html</code></h3>
+      <p>
+        navbar este o "bara de navigatie". Aceasta este tot timpul la inceputul oricarei pagini avand rol de a naviga
+        usor intre pagini. Contine cate un link de referinta
+        pentru toate paginile si un buton pentru login/register.
+      </p>
+    </section>
+
+    <section id="profile.html">
+      <h3><code>profile.html</code></h3>
+      <p>
+        Profile reprezinta profilul utilizatorului. Aceasta pagina contine poza de profil a utilizatorului, informatii
+        precum: email-ul, clasele in care s-a alaturat, numarul
+        de solutii corecte publicate si numarul de probleme rezolvate. De asemenea, contine si problemele rezolvate in
+        tabela din partea de jos a paginii.
+      </p>
+    </section>
+
+    <section id="work.html">
+      <h3><code>work.html</code></h3>
+      <p>
+        Pagina work.html prezinta problemele propuse spre rezolvare impreuna cu dificultatea lor, rosu insemnand greu de
+        rezolvat, galben reprezinta dificultatea medie, iar
+        verde, ce mai usoara. Deasupra listei de probleme exista un buton destinat incarcarii unei noi probleme. Butonul
+        afiseaza un pop-up in care trebuie introduse informatii
+        despre problema, cum ar fi: titlul, tagurile si o descriere. Utilizatorul poate adauga o problema si cu ajutorul
+        butonului "import". Pe fiecare problema din lista se
+        poate apasa trimitand utilizatorul spre pagina destinata problemei selectate, numita selectedProblem. In pagina
+        problemei sunt afisate cateva informatii despre problema,
+        precum numele, tagurile, descrierea completa a problemei, un field in care se introduce raspunsul pentru
+        problema si numele impreuna cu poza de profil a utilizatorului
+        care a adaugat problema.
+      </p>
+    </section>
+
+    <section id="assetsF">
+      <h3><code>Folderul assets</code></h3>
+      <p>
+        Aici sunt toate resursele care tin de imagini.
+      </p>
+    </section>
+
+    <section id="stylesheetsF">
+      <h3><code>Folderul stylesheets</code></h3>
+      <p>
+        Aici sunt toate resursele care tin de aspectul paginilor html. Fiecare pagina are propriul fisier .css care
+        asigura ca site-ul sa fie responsiv pe mai multe rezolutii.
+      </p>
+    </section>
+
+    <section id="scriptsF">
+      <h3><code>Folderul scripts</code></h3>
+      <p>
+        Aici sunt incluse scripturile in limbajul javascript pentru diverse actiuni, cum ar fi citirea click-urilor
+        utilizatorului pentru butoane.
+      </p>
+    </section>
+  </section>
+
+  <section id="proiectare">
+    <h2>Proiectarea</h2>
+    <a href="https://github.com/mariusmafteiv">
+      <p>
+        Marius Maftei : https://github.com/mariusmafteiv
+      </p>
+    </a>
+    <a href="https://github.com/vsprog2021">
+      <p>
+        Andrei Stefan : https://github.com/vsprog2021
+      </p>
+    </a>
+    <a href="https://github.com/mariusmafteiv/Tehnologii-WEB">
+      <p>
+        Proiectul: https://github.com/mariusmafteiv/Tehnologii-WEB
+      </p>
+    </a>
+  </section>
+
+</body>
+
+</html>

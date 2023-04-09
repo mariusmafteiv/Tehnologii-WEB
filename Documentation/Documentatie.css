@@ -1,0 +1,62 @@
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+    margin: 0
+}
+.titlee{
+    text-align: center;
+    font-weight: 700;
+    font-size: 3em;
+}
+
+h1 {
+    font-size: 2em;
+    margin: .67em 0
+}
+
+body {
+    max-width: 21cm;
+    margin: auto;
+    line-height: 1.6;
+    font-weight: 300;
+    font-family: Roboto,sans-serif
+}
+
+header>h1 {
+    margin: 0;
+    font-size: 3em;
+    padding-top: 4em
+}
+
+h1,h2,h3 {
+    letter-spacing: .0375em
+}
+
+h1,h2 {
+    color: #4b0061
+}
+
+h2 {
+    margin-top: 3em
+}
+
+h3 {
+    margin-top: 2.5em
+}
+
+@media screen and (max-width: 577px) {
+    div.status {
+        width:auto
+    }
+}
+
+@media screen and (max-width: 980px) {
+    body {
+        margin:0 2em
+    }
+}
