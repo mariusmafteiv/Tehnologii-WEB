@@ -13,6 +13,7 @@ body{
     background: url("/assets/bg2.jpg") no-repeat;
     background-size: cover;
     background-position: center;
+    overflow: hidden;
 }
 
 li{
@@ -192,7 +193,7 @@ header{
   position: absolute;
   left: 2%;
   top: 15%;
-  margin-right: 15%;
+  margin-right: 10%;
   align-items: baseline;
   overflow-y: auto;
   overflow-x: hidden;
@@ -206,10 +207,13 @@ header{
   margin: 10px 0;
   background-color: #9c9c9c;
   width: 60%;
-  height: 20%;
-  overflow: hidden;
+  height: 15%;
+  overflow-x: hidden;
+  overflow-y: hidden;
   margin-bottom: 10px;
   position: relative;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .list-item {
@@ -218,7 +222,7 @@ header{
   width: 100%;
   height: 100%;
   font-weight: bold;
-  margin-top: 7.5%;
+  margin-top: 3%;
 }
 
 .button {
@@ -240,14 +244,16 @@ header{
 
 .new-post{
   position: absolute;
-  top: calc(25%);
-  right: calc(20%);
-  width: 200px;
-  height: 100px;
+  top: calc(19%);
+  right: calc(16%);
+  width: 8.5%;
+  height: 8.5%;
   border: 2px solid black;
   cursor: pointer;
   background: linear-gradient(to bottom, rgba(192, 192, 192, 0.4) 0%, rgba(192, 192, 192, 0.4) 100%);
   z-index: 9;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .container{
@@ -267,10 +273,13 @@ header{
   border-radius: 6px;
   background: #ffffff;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 76.7%;
+  left: 100%;
   transform: translate(-50%, -50%);
   text-align: center;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .close-button{
