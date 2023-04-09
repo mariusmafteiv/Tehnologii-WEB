@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Viga", sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-color: #000;
+    background: url("/assets/bg2.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+li{
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.logo{
+    user-select: none;
+}
+
+header{
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar{
+    width: 100%;
+    max-width: 1200px;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle-btn{
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* Dropdown Menu */
+
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 300px;
+    height: 0;
+    background:rgba(180, 180, 180, .2) ;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown-menu li{
+    padding: .7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-menu .dm-login-btn{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown-menu.open{
+    height: 240px;
+}
+
+/* Responsive part */
+
+@media (min-width:577px) and (max-width: 992px){
+    .navbar .links,
+    .navbar .login-btn{
+        display: none;
+    }
+
+    .navbar .toggle-btn{
+        display: block;
+    }
+
+    .dropdown-menu{
+        display: block;
+        z-index: 1;
+    }
+}
+
+@media (max-width: 576px){
+    .navbar .links,
+    .navbar .login-btn{
+        display: none;
+    }
+
+    .navbar .toggle-btn{
+        display: block;
+    }
+
+    .dropdown-menu{
+        display: block;
+        z-index: 1;
+    }
+    .dropdown-menu{
+        left: 2rem;
+        width: unset;
+        z-index: 2;
+    }
+
+    /* section#login-reg-form{
+        height: calc(100vh - 60px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    } */
+}
+
+/* buttons */
+
+.login-btn{
+    background:transparent;
+    border: 2px solid #3F3F3F;
+    outline: none;
+    border-radius: 1em;
+    font-size: .8rem;
+    color:white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.navbar .login-btn:hover{
+    background: white;
+    color:black;
+}
+
+.dm-login-btn{
+    background:transparent;
+    border: 2px solid #3F3F3F;
+    outline: none;
+    border-radius: 1em;
+    font-size: .8rem;
+    color:white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.dropdown-menu .dm-login-btn:hover{
+    background: white;
+    color:black;
+}
+
+.navbar .links a.active, a:hover{
+    color: black ;
+    transform: .5;
+}
+
+.container {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    margin-top: 5%;
+}
+
+.title-box{
+    background-color: #f2f2f2f2;
+    border-radius: 5px;
+    position: relative;
+    height: 13%;
+    text-align: center;
+    overflow: auto;
+}
+
+.title{
+    font-size: 2em;
+    font-weight: bold;
+    justify-content: space-between;
+}
+
+.subtitle{
+    font-size: 1.2em;
+    vertical-align: bottom;
+}
+
+.problems-box{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 85%;
+}
+
+.problem{
+    background-color: #f2f2f2f2;
+    align-items: baseline;
+    margin-top: 2%;
+    position: relative;
+    height: 15%;
+    border-radius: 5px;
+}
+
+.problem-title{
+    margin-top: 1%;
+}
+
+.poblem-tags{
+    margin-top: 1%;
+}
+
+.problem-img{
+    position: absolute;
+    top: 10%;
+    right: 3%;
+    height: 80%;
+}
+
+.box-link{
+    text-decoration: none;
+    color: inherit;
+}

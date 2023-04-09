@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Viga", sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-color: #000;
+    background: url("/assets/bg2.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+li{
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.logo{
+    user-select: none;
+}
+
+header{
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar{
+    width: 100%;
+    max-width: 1200px;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle-btn{
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* Dropdown Menu */
+
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 300px;
+    height: 0;
+    background:rgba(180, 180, 180, .2) ;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown-menu li{
+    padding: .7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-menu .dm-login-btn{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown-menu.open{
+    height: 240px;
+}
+
+/* Responsive part */
+
+@media (min-width:577px) and (max-width: 992px){
+    .navbar .links,
+    .navbar .login-btn{
+        display: none;
+    }
+
+    .navbar .toggle-btn{
+        display: block;
+    }
+
+    .dropdown-menu{
+        display: block;
+        z-index: 1;
+    }
+}
+
+@media (max-width: 576px){
+    .navbar .links,
+    .navbar .login-btn{
+        display: none;
+    }
+
+    .navbar .toggle-btn{
+        display: block;
+    }
+
+    .dropdown-menu{
+        display: block;
+        z-index: 1;
+    }
+    .dropdown-menu{
+        left: 2rem;
+        width: unset;
+        z-index: 2;
+    }
+
+    /* section#login-reg-form{
+        height: calc(100vh - 60px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    } */
+}
+
+/* buttons */
+
+.login-btn{
+    background:transparent;
+    border: 2px solid #3F3F3F;
+    outline: none;
+    border-radius: 1em;
+    font-size: .8rem;
+    color:white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.navbar .login-btn:hover{
+    background: white;
+    color:black;
+}
+
+.dm-login-btn{
+    background:transparent;
+    border: 2px solid #3F3F3F;
+    outline: none;
+    border-radius: 1em;
+    font-size: .8rem;
+    color:white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.dropdown-menu .dm-login-btn:hover{
+    background: white;
+    color:black;
+}
+
+.navbar .links a.active, a:hover{
+    color: black ;
+    transform: .5;
+}
+
+.big-box {
+    position: absolute;
+    top: 12.5%;
+    left: 10%;
+    right: 10%;
+    bottom: 2%;
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #727272;
+}
+
+.title {
+    font-size: 3vw;
+    font-weight: bold;
+    text-align: center;
+}
+
+.tags {
+    font-size: 2vw;
+    margin-bottom: 2vw;
+}
+
+.small-box {
+    height: 30%;
+    width: 90%;
+    overflow-y: auto;
+    margin-bottom: 2vw;
+    background-color: rgb(170, 170, 170);
+}
+
+.text-input {
+    height: 10%;
+    width: 90%;
+    border: 1px solid gray;
+    margin-bottom: 2vw;
+    background-color: rgb(170, 170, 170);
+}
+
+.author-box {
+    display: flex;
+    align-items: center;
+    font-size: 3vw;
+    margin-bottom: 2vw;
+}
+
+.author-image {
+    height: 30%;
+    margin-right: 2vw;
+}
+
+.author-surname {
+    margin-left: 0.5vw;
+}

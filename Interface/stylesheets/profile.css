@@ -9,8 +9,7 @@
 
 body{
     height: 100vh;
-    background-color: #000;
-    background: url("/assets/bg2.jpg") no-repeat;
+    background: #E9DCD1;
     background-size: cover;
     background-position: center;
 }
@@ -21,7 +20,7 @@ li{
 
 a {
     text-decoration: none;
-    color: white;
+    color: #E9DCD1;
     font-size: 1rem;
 }
 
@@ -30,6 +29,7 @@ a {
 }
 
 header{
+    background: #39424A;
     position: relative;
     padding: 0 2rem;
 }
@@ -101,7 +101,7 @@ header{
 }
 
 .navbar .links a.active, a:hover{
-    color: black ;
+    color: white ;
     transform: .5;
 }
 
@@ -189,10 +189,11 @@ header{
     justify-content: center;
     align-items: center;
 
-    background: rgba(180, 180, 180, .75);
+    /* background: rgba(180, 180, 180, .75);
+    backdrop-filter: blur(1px); */
     border: .1em solid black;
     border-radius: 1em;
-    backdrop-filter: blur(1px);
+    background: #39424A;
     box-shadow: 0 0 30px rgba(0, 0, 0, .5);
 }
 
@@ -234,11 +235,12 @@ header{
     align-items: center;
     margin:auto;
 
-    background: rgba(180, 180, 180, .75);
+    /* background: rgba(180, 180, 180, .75);
     border: .1em solid black;
     border-radius: 1em;
     backdrop-filter: blur(1px);
-    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5); */
+    background: #39424A;
     user-select: none;
 
     overflow-y: scroll;
