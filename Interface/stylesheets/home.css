@@ -8,11 +8,9 @@
 body{
     height: 100vh;
     background-color: #000;
-    background: url("/assets/bg2.jpg") no-repeat;
+    background: url('/assets/bg2.jpg');
     background-size: cover;
     background-position: center;
-    overflow: hidden;
-
 }
 
 header li{
@@ -170,35 +168,9 @@ header{
     color: white;
 }
 
-/* Home Section */
+/* Responsive part - no longer needed */
 
-.container{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    left: 50%;
-    transform: trasnlateX(-50%);
-}
-
-
-.right-container::-webkit-scrollbar { 
-    width: 0;
-    height: 0;
-}
-
-.right-container h2{
-    padding: 1em 1em;
-    color:#D5CDC6;
-    font-weight: 150;
-}
-
-.right-container{
-    margin-left: 10em;
-}
-
-/* Responsive part */
-
-@media (min-width:577px) and (max-width: 992px){
+/* @media (min-width:577px) and (max-width: 992px){
     .navbar .links,
     .navbar .login-btn{
         display: none;
@@ -277,13 +249,17 @@ header{
         justify-content: center;
         text-align: center;
     }
+} */
 
-    /* section#login-reg-form{
-        height: calc(100vh - 60px);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    } */
+/* Home Section */
+
+section#home{
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: xx-large;
 }
