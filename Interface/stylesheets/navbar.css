@@ -95,6 +95,49 @@ header{
     height: 240px;
 }
 
+/* buttons */
+
+.login-btn{
+    background:transparent;
+    border: 2px solid #3F3F3F;
+    outline: none;
+    border-radius: 1em;
+    font-size: .8rem;
+    color:white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.navbar .login-btn:hover{
+    background: white;
+    color:black;
+}
+
+.dm-login-btn{
+    background:transparent;
+    border: 2px solid #3F3F3F;
+    outline: none;
+    border-radius: 1em;
+    font-size: .8rem;
+    color:white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.dropdown-menu .dm-login-btn:hover{
+    background: white;
+    color:black;
+}
+
+.navbar .links a.active, a:hover{
+    color: black ;
+    transform: .5;
+}
+
 /* Responsive part */
 
 @media (min-width:577px) and (max-width: 992px){
@@ -141,47 +184,4 @@ header{
         justify-content: center;
         text-align: center;
     } */
-}
-
-/* buttons */
-
-.login-btn{
-    background:transparent;
-    border: 2px solid #3F3F3F;
-    outline: none;
-    border-radius: 1em;
-    font-size: .8rem;
-    color:white;
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    transition: .5s;
-}
-
-.navbar .login-btn:hover{
-    background: white;
-    color:black;
-}
-
-.dm-login-btn{
-    background:transparent;
-    border: 2px solid #3F3F3F;
-    outline: none;
-    border-radius: 1em;
-    font-size: .8rem;
-    color:white;
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    transition: .5s;
-}
-
-.dropdown-menu .dm-login-btn:hover{
-    background: white;
-    color:black;
-}
-
-.navbar .links a.active, a:hover{
-    color: black ;
-    transform: .5;
 }
