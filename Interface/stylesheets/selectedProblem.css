@@ -8,89 +8,182 @@
 }
 
 body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    height: 100vh;
+    background-color: #000;
     background: url("/assets/bg2.jpg") no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width:100%;
-    padding: .5em 10em;
-    /* Next to disabled for transparent upper*/
-    background: white;
-    border-bottom: .2em solid #3F3F3F;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 99;
+li{
+    list-style: none;
 }
 
-.name{
-    font-size: 1.5em;
-    color: black;
-    user-select: none;
-    margin-right: 21.5em;
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
 }
 
 .logo{
-    width: 4.5%;
-    height: 4.5%;
     user-select: none;
 }
 
-.navbar a{
+header{
     position: relative;
-    font-size: 1.1em;
-    color: black;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 40px;
+    padding: 0 2rem;
 }
 
-.navbar a::after{
-    content: '';
-    position: absolute;
-    left:0;
-    bottom: -0.3em;
+.navbar{
     width: 100%;
-    height: 3px;
-    background: black;
-    border-radius: 5px;
-    transform: scaleX(0);
-    transform-origin: left; /* we can change where to start the animation */
-    transition: transform .5s;
+    max-width: 1200px;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.navbar a:hover::after{
-    transform-origin: right;
-    transform: scaleX(1);
+.navbar .logo h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
 }
 
-.navbar .login-btn{
-    width: 100px;
-    height: 40px;
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle-btn{
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* Dropdown Menu */
+
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 300px;
+    height: 0;
+    background:rgba(180, 180, 180, .2) ;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown-menu li{
+    padding: .7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-menu .dm-login-btn{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown-menu.open{
+    height: 240px;
+}
+
+/* Responsive part */
+
+@media (min-width:577px) and (max-width: 992px){
+    .navbar .links,
+    .navbar .login-btn{
+        display: none;
+    }
+
+    .navbar .toggle-btn{
+        display: block;
+    }
+
+    .dropdown-menu{
+        display: block;
+        z-index: 1;
+    }
+}
+
+@media (max-width: 576px){
+    .navbar .links,
+    .navbar .login-btn{
+        display: none;
+    }
+
+    .navbar .toggle-btn{
+        display: block;
+    }
+
+    .dropdown-menu{
+        display: block;
+        z-index: 1;
+    }
+    .dropdown-menu{
+        left: 2rem;
+        width: unset;
+        z-index: 2;
+    }
+
+    /* section#login-reg-form{
+        height: calc(100vh - 60px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    } */
+}
+
+/* buttons */
+
+.login-btn{
     background:transparent;
     border: 2px solid #3F3F3F;
     outline: none;
-    border-radius: 10px;
+    border-radius: 1em;
+    font-size: .8rem;
+    color:white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
     cursor: pointer;
-    font-size: 1.1em;
-    color:black;
-    font-weight: 500;
-    margin-left: 40px;
     transition: .5s;
 }
 
 .navbar .login-btn:hover{
-    background: #3F3F3F;
+    background: white;
+    color:black;
+}
+
+.dm-login-btn{
+    background:transparent;
+    border: 2px solid #3F3F3F;
+    outline: none;
+    border-radius: 1em;
+    font-size: .8rem;
     color:white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.dropdown-menu .dm-login-btn:hover{
+    background: white;
+    color:black;
+}
+
+.navbar .links a.active, a:hover{
+    color: black ;
+    transform: .5;
 }
 
 .big-box {

@@ -6,20 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selected Class</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="stylesheets/selectedClass.css">
 </head>
 
 <body>
     <header>
-        <img class="logo" , src="assets/logo.png">
-        <h2 class="name">PrInfo v2</h2>
-        <nav class="navbar">
-            <a href="home.html">Home</a>
-            <a href="profile.html">Profile</a>
-            <a href="myclasses.html">My Classes</a>
-            <a href="work.html">Work</a>
-            <button class="login-btn">Login</button>
-        </nav>
+        <div class="navbar">
+            <div class="logo"><h2>PrInfo</h2></div>
+            <ul class="links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="myclasses.html">Classes</a></li>
+                <li><a href="work.html">Work</a></li>
+            </ul>
+            <a href="#" class="login-btn">Login</a>
+            <div class="toggle-btn">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown-menu">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="myclasses.html">Classes</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="connection.html" class="dm-login-btn">Login</a></li>
+        </div>  
     </header>
     <div class="container">
         <div class="title-box">
@@ -72,6 +84,7 @@
             </div>
         </div>
     </div>
+    <script src="scripts/navbar.js"></script>
 </body>
 
 </html>
