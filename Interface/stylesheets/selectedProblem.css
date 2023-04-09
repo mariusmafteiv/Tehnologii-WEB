@@ -9,8 +9,7 @@
 
 body{
     height: 100vh;
-    background-color: #000;
-    background: url("/assets/bg2.jpg") no-repeat;
+    background-color: #E9DCD1;
     background-size: cover;
     background-position: center;
 }
@@ -231,7 +230,8 @@ header{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    background-color: #727272;
+    background-color: #39424A;
+    border-radius: 1em;
 }
 
 .title {
@@ -250,7 +250,9 @@ header{
     width: 90%;
     overflow-y: auto;
     margin-bottom: 2vw;
-    background-color: rgb(170, 170, 170);
+    background-color: #D5CDC6;
+    border-radius: 1em;
+    padding: 1%;
 }
 
 .text-input {
@@ -258,7 +260,9 @@ header{
     width: 90%;
     border: 1px solid gray;
     margin-bottom: 2vw;
-    background-color: rgb(170, 170, 170);
+    background-color: #D5CDC6;
+    border-radius: 1em;
+    padding: 1%;
 }
 
 .author-box {

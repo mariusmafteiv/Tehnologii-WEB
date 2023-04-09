@@ -9,8 +9,7 @@
 
 body{
     height: 100vh;
-    background-color: #000;
-    background: url("/assets/bg2.jpg") no-repeat;
+    background-color: #E9DCD1;
     background-size: cover;
     background-position: center;
 }
@@ -228,12 +227,17 @@ header{
 }
 
 .title-box{
-    background-color: #f2f2f2f2;
+    background-color: #39424A;
     border-radius: 5px;
     position: relative;
     height: 13%;
     text-align: center;
     overflow: auto;
+    left: 10%;
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    color: #D5CDC6;
 }
 
 .title{
@@ -256,12 +260,16 @@ header{
 }
 
 .problem{
-    background-color: #f2f2f2f2;
+    background-color: #39424A;
+    color: #D5CDC6;
     align-items: baseline;
-    margin-top: 2%;
+    margin-top: 1.5%;
     position: relative;
     height: 15%;
     border-radius: 5px;
+    left: 10%;
+    border: 1px solid gray;
+    padding: 0.5%;
 }
 
 .problem-title{

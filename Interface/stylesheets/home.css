@@ -11,6 +11,8 @@ body{
     background: url("/assets/bg2.jpg") no-repeat;
     background-size: cover;
     background-position: center;
+    overflow: hidden;
+
 }
 
 header li{
@@ -171,48 +173,13 @@ header{
 /* Home Section */
 
 .container{
-    position: fixed;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     justify-content: center;
-    user-select: none;
+    align-content: center;
+    left: 50%;
+    transform: trasnlateX(-50%);
 }
 
-.left-container{
-    margin-top: 5em;
-    margin-left: 10em;
-}
-
-.left-container .logo{
-    width: 400px;
-    height: 400px;
-}
-
-.left-container .logo{
-    max-width: 100%;
-    height: auto;
-}
-
-.right-container{
-    position: relative;
-    float: right;
-    width: 100%;
-    max-width: 600px;
-    height: 300px;
-    display: absolute;
-    align-self: center;
-    justify-content: center;
-    align-items: center;
-
-    background: transparent;
-    backdrop-filter: blur(1px);
-    bottom: -3em;
-
-    overflow-y: scroll;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
 
 .right-container::-webkit-scrollbar { 
     width: 0;
@@ -220,7 +187,8 @@ header{
 }
 
 .right-container h2{
-    color:white;
+    padding: 1em 1em;
+    color:#D5CDC6;
     font-weight: 150;
 }
 
