@@ -13,21 +13,22 @@ body{
     background-position: center;
 }
 
-li{
+header li{
     list-style: none;
 }
 
-a {
+header a {
     text-decoration: none;
     color: white;
     font-size: 1rem;
 }
 
-.logo{
+header .logo{
     user-select: none;
 }
 
 header{
+    background: #39424A;
     position: relative;
     padding: 0 2rem;
 }
@@ -35,7 +36,7 @@ header{
 .navbar{
     width: 100%;
     max-width: 1200px;
-    height: 60px;
+    height: 3.75em;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -49,6 +50,7 @@ header{
 }
 
 .navbar .links{
+    position: relative;
     display: flex;
     gap: 2rem;
 }
@@ -66,7 +68,7 @@ header{
     display: none;
     position: absolute;
     right: 2rem;
-    top: 60px;
+    top: 3.75em;
     width: 300px;
     height: 0;
     background:rgba(180, 180, 180, .2) ;
@@ -90,50 +92,80 @@ header{
 }
 
 .dropdown-menu.open{
-    height: 240px;
+    height: 16em;
 }
 
 /* buttons */
 
 .login-btn{
-    background:transparent;
-    border: 2px solid #3F3F3F;
+    background: #39424A;
+    color: white;
     outline: none;
-    border-radius: 1em;
-    font-size: .8rem;
-    color:white;
     font-weight: bold;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.25rem;
+    border-radius: 2em;
     cursor: pointer;
     transition: .5s;
 }
 
-.navbar .login-btn:hover{
-    background: white;
-    color:black;
+.login-btn:hover{
+    background-color: var(--clr);
+    letter-spacing: .05em;
+    box-shadow: 0 0 1em var(--clr);
 }
 
+
 .dm-login-btn{
-    background:transparent;
-    border: 2px solid #3F3F3F;
+    background: #39424A;
+    color: white;
     outline: none;
-    border-radius: 1em;
-    font-size: .8rem;
-    color:white;
     font-weight: bold;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.25rem;
+    border-radius: 2em;
     cursor: pointer;
     transition: .5s;
 }
 
 .dropdown-menu .dm-login-btn:hover{
-    background: white;
-    color:black;
+    background-color: var(--clr);
+    letter-spacing: .05em;
+    box-shadow: 0 0 1em var(--clr);
 }
 
-.navbar .links a.active, a:hover{
-    color: black ;
-    transform: .5;
+.navbar li a:not(.dm-login-btn):after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: white;
+    margin: auto;
+    display: block;
+    transition: .5s;
+}
+
+.navbar li a:hover:not(.dm-login-btn):after{
+    width: 100%;
+}
+
+.dropdown-menu li a:not(.dm-login-btn){
+    color: #39424A;
+}
+
+.dropdown-menu li a:not(.dm-login-btn):after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: white;
+    margin: auto;
+    display: block;
+    transition: .5s;
+}
+
+.dropdown-menu li a:hover:not(.dm-login-btn):after{
+    width: 100%;
+}
+
+.dropdown-menu li a:hover:not(.dm-login-btn){
+    color: white;
 }
 
 /* Home Section */

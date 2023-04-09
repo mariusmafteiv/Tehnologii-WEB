@@ -14,17 +14,17 @@ body{
     background-position: center;
 }
 
-li{
+header li{
     list-style: none;
 }
 
-a {
+header a {
     text-decoration: none;
-    color: #E9DCD1;
+    color: white;
     font-size: 1rem;
 }
 
-.logo{
+header .logo{
     user-select: none;
 }
 
@@ -37,7 +37,7 @@ header{
 .navbar{
     width: 100%;
     max-width: 1200px;
-    height: 60px;
+    height: 3.75em;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -51,6 +51,7 @@ header{
 }
 
 .navbar .links{
+    position: relative;
     display: flex;
     gap: 2rem;
 }
@@ -62,56 +63,13 @@ header{
     display: none;
 }
 
-/* buttons */
-
-.login-btn{
-    background:transparent;
-    border: 2px solid #3F3F3F;
-    outline: none;
-    border-radius: 1em;
-    font-size: .8rem;
-    color:white;
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    transition: .5s;
-}
-
-.navbar .login-btn:hover{
-    background: white;
-    color:black;
-}
-
-.dm-login-btn{
-    background:transparent;
-    border: 2px solid #3F3F3F;
-    outline: none;
-    border-radius: 1em;
-    font-size: .8rem;
-    color:white;
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    transition: .5s;
-}
-
-.dropdown-menu .dm-login-btn:hover{
-    background: white;
-    color:black;
-}
-
-.navbar .links a.active, a:hover{
-    color: white ;
-    transform: .5;
-}
-
 /* Dropdown Menu */
 
 .dropdown-menu{
     display: none;
     position: absolute;
     right: 2rem;
-    top: 60px;
+    top: 3.75em;
     width: 300px;
     height: 0;
     background:rgba(180, 180, 180, .2) ;
@@ -135,7 +93,80 @@ header{
 }
 
 .dropdown-menu.open{
-    height: 240px;
+    height: 16em;
+}
+
+/* buttons */
+
+.login-btn{
+    background: #39424A;
+    color: white;
+    outline: none;
+    font-weight: bold;
+    padding: 0.5rem 1.25rem;
+    border-radius: 2em;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.login-btn:hover{
+    background-color: var(--clr);
+    letter-spacing: .05em;
+    box-shadow: 0 0 1em var(--clr);
+}
+
+
+.dm-login-btn{
+    background: #39424A;
+    color: white;
+    outline: none;
+    font-weight: bold;
+    padding: 0.5rem 1.25rem;
+    border-radius: 2em;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.dropdown-menu .dm-login-btn:hover{
+    background-color: var(--clr);
+    letter-spacing: .05em;
+    box-shadow: 0 0 1em var(--clr);
+}
+
+.navbar li a:not(.dm-login-btn):after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: white;
+    margin: auto;
+    display: block;
+    transition: .5s;
+}
+
+.navbar li a:hover:not(.dm-login-btn):after{
+    width: 100%;
+}
+
+.dropdown-menu li a:not(.dm-login-btn){
+    color: #39424A;
+}
+
+.dropdown-menu li a:not(.dm-login-btn):after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: white;
+    margin: auto;
+    display: block;
+    transition: .5s;
+}
+
+.dropdown-menu li a:hover:not(.dm-login-btn):after{
+    width: 100%;
+}
+
+.dropdown-menu li a:hover:not(.dm-login-btn){
+    color: white;
 }
 
 /* Profile section */
@@ -145,12 +176,13 @@ header{
     flex-direction: column;
     align-content: center;
     padding: 0px 100px 0px 100px;
-    gap: 2em;
+    gap: 0.5em;
 }
 
 .upper{
     display: flex;
     width: 100%;
+    padding: 1em 0em;
 }
 
 .profile-box{
@@ -171,30 +203,24 @@ header{
     width: 13em;
     height: 13em;
 
-    background: url("/assets/avatar.png") no-repeat;
+    background: url(/assets/avatar.png) no-repeat;
     background-size: cover;
     background-position: center;
-    border: .1em solid black;
+    border: 0.02em solid black;
     border-radius: 50%;
-    backdrop-filter: blur(1px);
-    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
 }
 
 .content .information-box{
     position: relative;
-    /* float: right; */
     width: 40em;
     height: 16em;
     display: absolute;
     justify-content: center;
     align-items: center;
 
-    /* background: rgba(180, 180, 180, .75);
-    backdrop-filter: blur(1px); */
-    border: .1em solid black;
+    border: .02em solid black;
     border-radius: 1em;
     background: #39424A;
-    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
 }
 
 .username{
@@ -203,7 +229,7 @@ header{
 
 .information-box h2{
     font-size: 2em;
-    color: #3F3F3F;
+    color: white;
     text-align: center;
     display: inline-block;
     margin: 0.5em 1.25em;
@@ -219,7 +245,7 @@ header{
 .information-box h1{
     padding: 0.4em 1em;
     font-size: 1.25em;
-    color: black;
+    color: white;
     font-weight: 50;
     font-family: Arial;
     justify-content: space-between;
@@ -235,12 +261,8 @@ header{
     align-items: center;
     margin:auto;
 
-    /* background: rgba(180, 180, 180, .75);
-    border: .1em solid black;
-    border-radius: 1em;
-    backdrop-filter: blur(1px);
-    box-shadow: 0 0 30px rgba(0, 0, 0, .5); */
-    background: #39424A;
+    background: #E9DCD1;
+    border: 0.02em solid #39424A;
     user-select: none;
 
     overflow-y: scroll;
@@ -255,13 +277,13 @@ header{
 
 .bottom h2{
     background-size: cover;
-    background-color: rgba(180, 180, 180, .75);;
+    background-color: #39424A;
     width: 100%;
     font-size: 2em;
-    color: #3F3F3F;
+    color: white;
+    border-bottom: 0.02em solid #39424A;
     text-align: center;
     display: inline-block;
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
 }
@@ -308,7 +330,10 @@ header{
         font-size: 1.5em;
     }
     
-    
+    .upper{
+        padding: 0.4em 0em;;
+    }
+
     .details{
         position: absolute;
         top: 3.5em;
@@ -348,10 +373,11 @@ header{
 
     .upper{
         display: initial;
+        padding: 0;
     }
 
     .profile-box {
-        padding: 1em 0px;
+        padding: .3em 0px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -395,7 +421,7 @@ header{
     }
 
     .bottom{
-        height: 16em;
+        height: 14em;
     }
 
     /* section#login-reg-form{
