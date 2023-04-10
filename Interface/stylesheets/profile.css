@@ -10,8 +10,6 @@
 body{
     height: 100vh;
     background: #E9DCD1;
-    background-size: cover;
-    background-position: center;
 }
 
 header li{
@@ -203,7 +201,7 @@ header{
     width: 13em;
     height: 13em;
 
-    background: url(/assets/avatar.png) no-repeat;
+    background: url(../assets/avatar.png) no-repeat;
     background-size: cover;
     background-position: center;
     border: 0.02em solid black;
