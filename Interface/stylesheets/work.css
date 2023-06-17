@@ -9,27 +9,28 @@
 
 body{
     height: 100vh;
-    background-color: #000;
-    background: url("/assets/bg2.jpg") no-repeat;
+    background-color: #E9DCD1;
     background-size: cover;
     background-position: center;
+    overflow: hidden;
 }
 
-li{
+header li{
     list-style: none;
 }
 
-a {
+header a {
     text-decoration: none;
     color: white;
     font-size: 1rem;
 }
 
-.logo{
+header .logo{
     user-select: none;
 }
 
 header{
+    background: #39424A;
     position: relative;
     padding: 0 2rem;
 }
@@ -37,7 +38,7 @@ header{
 .navbar{
     width: 100%;
     max-width: 1200px;
-    height: 60px;
+    height: 3.75em;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -51,6 +52,7 @@ header{
 }
 
 .navbar .links{
+    position: relative;
     display: flex;
     gap: 2rem;
 }
@@ -68,7 +70,7 @@ header{
     display: none;
     position: absolute;
     right: 2rem;
-    top: 60px;
+    top: 3.75em;
     width: 300px;
     height: 0;
     background:rgba(180, 180, 180, .2) ;
@@ -92,7 +94,80 @@ header{
 }
 
 .dropdown-menu.open{
-    height: 240px;
+    height: 16em;
+}
+
+/* buttons */
+
+.login-btn{
+    background: #39424A;
+    color: white;
+    outline: none;
+    font-weight: bold;
+    padding: 0.5rem 1.25rem;
+    border-radius: 2em;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.login-btn:hover{
+    background-color: var(--clr);
+    letter-spacing: .05em;
+    box-shadow: 0 0 1em var(--clr);
+}
+
+
+.dm-login-btn{
+    background: #39424A;
+    color: white;
+    outline: none;
+    font-weight: bold;
+    padding: 0.5rem 1.25rem;
+    border-radius: 2em;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.dropdown-menu .dm-login-btn:hover{
+    background-color: var(--clr);
+    letter-spacing: .05em;
+    box-shadow: 0 0 1em var(--clr);
+}
+
+.navbar li a:not(.dm-login-btn):after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: white;
+    margin: auto;
+    display: block;
+    transition: .5s;
+}
+
+.navbar li a:hover:not(.dm-login-btn):after{
+    width: 100%;
+}
+
+.dropdown-menu li a:not(.dm-login-btn){
+    color: #39424A;
+}
+
+.dropdown-menu li a:not(.dm-login-btn):after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: white;
+    margin: auto;
+    display: block;
+    transition: .5s;
+}
+
+.dropdown-menu li a:hover:not(.dm-login-btn):after{
+    width: 100%;
+}
+
+.dropdown-menu li a:hover:not(.dm-login-btn){
+    color: white;
 }
 
 /* Responsive part */
@@ -109,7 +184,7 @@ header{
 
     .dropdown-menu{
         display: block;
-        z-index: 1;
+        z-index: 99;
     }
 }
 
@@ -130,7 +205,7 @@ header{
     .dropdown-menu{
         left: 2rem;
         width: unset;
-        z-index: 2;
+        z-index: 99;
     }
 
     /* section#login-reg-form{
@@ -143,58 +218,19 @@ header{
     } */
 }
 
-/* buttons */
-
-.login-btn{
-    background:transparent;
-    border: 2px solid #3F3F3F;
-    outline: none;
-    border-radius: 1em;
-    font-size: .8rem;
-    color:white;
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    transition: .5s;
-}
-
-.navbar .login-btn:hover{
-    background: white;
-    color:black;
-}
-
-.dm-login-btn{
-    background:transparent;
-    border: 2px solid #3F3F3F;
-    outline: none;
-    border-radius: 1em;
-    font-size: .8rem;
-    color:white;
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    transition: .5s;
-}
-
-.dropdown-menu .dm-login-btn:hover{
-    background: white;
-    color:black;
-}
-
-.navbar .links a.active, a:hover{
-    color: black ;
-    transform: .5;
-}
+/* Work CSS */
 
 .new-post{
     position: absolute;
-    top: calc(25%);
-    right: calc(20%);
-    width: 200px;
-    height: 100px;
+    top: calc(20%);
+    right: calc(12.5%);
+    width: 8.5%;
+    height: 8.5%;
     border: 2px solid black;
     cursor: pointer;
-    background: linear-gradient(to bottom, rgba(192, 192, 192, 0.4) 0%, rgba(192, 192, 192, 0.4) 100%)
+    background: linear-gradient(to bottom, rgba(192, 192, 192, 0.4) 0%, rgba(192, 192, 192, 0.4) 100%);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .problem-list {
@@ -202,26 +238,35 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+    height: 65vh;
     overflow-y: auto;
-    margin-top: 50vh;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    margin-top: 30vh;
     margin-bottom: 0;
     overflow-x: hidden;
+    width: 100%;
 }
 
 .box {
+    left: 5%;
     position: relative;
     border: 1px solid gray;
     margin-bottom: 10px;
     height: 15vh;
     width: 90vw;
     overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     cursor: pointer;
+    background-color: #39424A;
+    border-radius: 1em;
+    padding: 1%;
 }
 
 .box-link {
     text-decoration: none;
-    color: inherit;
+    color: #D5CDC6;
   }
 
 .description {
@@ -247,11 +292,14 @@ header{
     justify-content: center;
     z-index: 10;
     visibility: hidden;
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .popup{
-    width: 600px;
-
+    width: 60%;
+    height: 60%;
     border-radius: 6px;
     background: #ffffff;
     position: absolute;
@@ -259,6 +307,9 @@ header{
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .close-button{
@@ -294,7 +345,7 @@ textarea {
   margin-bottom: 10px;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
   resize: none;
-  background-color: #8d8d8d;
+  background-color: #E9DCD1;
   vertical-align: top;
 }
 
@@ -312,13 +363,15 @@ button[type="button"] {
 }
 
 .import-button {
-    background-color: #f1c40f;
-    color: #fff;
+    background-color: #bef103;
+    color: #000000;
+    margin-left: 3.5%;
 }
 
 .create-button {
-    background-color: #2ecc71;
-    color: #fff;
+    background-color: #bef103;
+    color: #000000;
+    margin-right: 3.5%;
 }
 
 .close-button {
@@ -326,5 +379,5 @@ button[type="button"] {
     z-index: 11;
     top: 10px;
     right: 10px;
-    background-color: #d10000;
+    background-color: #b9b9b9;
 }
