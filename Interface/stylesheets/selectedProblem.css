@@ -227,12 +227,14 @@ header{
     bottom: 2%;
     border: 1px solid gray;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
     background-color: #39424A;
     border-radius: 1em;
+    width: 80%;
 }
+
 
 .title {
     font-size: 3vw;
@@ -243,12 +245,15 @@ header{
 .tags {
     font-size: 2vw;
     margin-bottom: 2vw;
+    text-align: center;
 }
 
 .small-box {
-    height: 30%;
-    width: 90%;
+    height: 30vh;
+    width: 60vw;
     overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     margin-bottom: 2vw;
     background-color: #D5CDC6;
     border-radius: 1em;
@@ -256,25 +261,51 @@ header{
 }
 
 .text-input {
-    height: 10%;
-    width: 90%;
+    height: 15vh;
+    width: 100%;
     border: 1px solid gray;
     margin-bottom: 2vw;
     background-color: #D5CDC6;
     border-radius: 1em;
     padding: 1%;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.submit-btn {
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: #39424A;
+    border-radius: 5px;
 }
 
 .author-box {
+    position: absolute;
+    bottom: 2%;
+    left: 2%;
     display: flex;
     align-items: center;
     font-size: 3vw;
-    margin-bottom: 2vw;
 }
 
 .author-image {
-    height: 30%;
+    height: 10vh;
+    width: 9vw;
     margin-right: 2vw;
+    border-radius: 50%;
+    border: 0.02em solid black;
 }
 
 .author-surname {

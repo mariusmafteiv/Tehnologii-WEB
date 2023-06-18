@@ -223,7 +223,7 @@ header{
   height: 90%;
   position: absolute;
   left: 2%;
-  top: 15%;
+  top: 10%;
   margin-right: 10%;
   align-items: baseline;
   overflow-y: auto;
@@ -258,6 +258,14 @@ header{
   margin-top: 3%;
 }
 
+#ap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
 .button {
   position: absolute;
   background-color: #1d02b3;
@@ -289,6 +297,14 @@ header{
   overflow: hidden;
 }
 
+.new-class {
+  top: calc(19%);
+}
+
+.assign-homework {
+  top: calc(81%);
+}
+
 .container{
   position: absolute;
   width: 50%;
@@ -316,8 +332,53 @@ header{
   border: 1.5px solid rgb(165, 165, 165);
 }
 
+.assign-popup {
+  width: 60%;
+  height: 60%;
+  border-radius: 6px;
+  background: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  border: 1.5px solid rgb(165, 165, 165);
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  grid-gap: 10px;
+  align-items: center;
+}
+
+.assign-popup form {
+  display: grid;
+  grid-gap: 10px;
+  justify-items: center;
+}
+
+.assign-popup form label {
+  text-align: left;
+}
+
+.assign-popup form .buttons-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  justify-items: center;
+}
+
 .close-button{
   position: relative;
+  z-index: 11;
+  top: 0;
+  right: 0;
+  margin: 10px;
+}
+
+.close-button-h {
+  position: absolute;
   z-index: 11;
   top: 0;
   right: 0;
@@ -336,7 +397,20 @@ header{
   display: flex;
   margin-bottom: 20px;
   font-size: 1.5em;
+}
 
+.popup-title-h {
+  display: flex;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+.open-popup{
+  visibility: visible;
+}
+
+.close-popup{
+  visibility: hidden;
 }
 
 .label{
@@ -357,7 +431,45 @@ input[type="text"] {
   position: absolute;
   bottom: 5%;
   right: 2%;
-  }
+  transition: background-color 0.3s ease-in-out;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.create-button:hover {
+  background-color: #9fbd00;
+}
+
+.create-button-h {
+  background-color: #bef103;
+  color: #000000;
+  position: relative;
+  bottom: 5%;
+  right: 2%;
+  transition: background-color 0.3s ease-in-out;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.cancel-button-h {
+  position: relative;
+  bottom: 5%;
+  left: 2%;
+}
+
+.close-button-h {
+  position: absolute;
+  z-index: 11;
+  top: 0;
+  right: 0;
+  margin: 10px;
+}
 
 .close-button {
   position: absolute;
@@ -391,3 +503,8 @@ textarea {
   vertical-align: top;
 }
 
+.cancel-button {
+  position: absolute;
+  bottom: 5%;
+  left: 2%;
+}

@@ -292,18 +292,19 @@ header{
     padding: 0;
     cursor: pointer;
 }
-  
+
 .list-item {
-    padding: 1em;
-    border-bottom: 1px solid #ccc;
+    padding: 1.125em;
+    border-bottom: 1px solid #39424A;
+    display: block;
 }
-  
+
 .list-item:last-child {
+    border-top: 1px solid #39424A;
     border-bottom: none;
 }
 
 /* Responsive part */
-
 @media (min-width:577px) and (max-width: 992px){
     .navbar .links,
     .navbar .login-btn{

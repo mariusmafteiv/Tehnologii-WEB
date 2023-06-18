@@ -217,80 +217,67 @@ header{
     } */
 }
 
-/* selectedClass CSS */
+/* selectedProblem CSS */
 
-.container {
-    position: absolute;
-    width: 80%;
-    height: 80%;
-    margin-top: 5%;
-}
-
-.title-box{
-    background-color: #39424A;
-    border-radius: 5px;
+.big-box {
     position: relative;
-    height: 13%;
-    text-align: center;
-    overflow: auto;
+    top: 5%;
     left: 10%;
-    overflow: auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    color: #D5CDC6;
-}
-
-.title{
-    font-size: 2em;
-    font-weight: bold;
-    justify-content: space-between;
-}
-
-.subtitle{
-    font-size: 1.2em;
-    vertical-align: bottom;
-}
-
-.problems-box{
+    right: 10%;
+    bottom: 2%;
+    border: 1px solid gray;
     display: flex;
     flex-direction: column;
-    position: absolute;
-    width: 100%;
-    height: 85%;
-    left: 10%;
-}
-
-.problem{
+    justify-content: flex-start; /* Schimbăm justificarea elementelor la începutul containerului */
+    align-items: center;
     background-color: #39424A;
-    color: #D5CDC6;
-    align-items: baseline;
-    margin-top: 1.5%;
-    position: relative;
-    height: 15%;
-    padding-left: 1%;
+    border-radius: 1em;
+    width: 80%;
 }
 
-.problem-title{
-    margin-top: 1%;
+.title {
+    font-size: 3vw;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2vw;
 }
 
-.poblem-tags{
-    margin-top: 1%;
+.tags {
+    font-size: 2vw;
+    margin-bottom: 2vw;
+    text-align: center;
 }
 
-.problem-img{
-    position: absolute;
-    top: 10%;
-    right: 3%;
-    height: 80%;
-    z-index: 10;
+.small-box {
+    height: 18vh;
+    width: 60vw;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    margin-bottom: 2vw;
+    background-color: #D5CDC6;
+    border-radius: 1em;
+    padding: 1%;
 }
 
-.problem, .box-link{
-    background-color: #39424A;
-    color: #D5CDC6;
-    margin-top: 1.5%;
-    position: relative;
-    height: 15%;
-    text-decoration: none;
+.author-box {
+    display: flex;
+    align-items: center;
+    font-size: 3vw;
+    text-align: center;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+}
+
+.author-image {
+    height: 10vh;
+    width: 9vw;
+    margin-bottom: 0.25vw;
+    margin-right: 0.25vw;
+    border-radius: 50%;
+    border: 0.02em solid black;
+}
+
+.author-surname {
+    margin-left: 0.5vw;
 }
