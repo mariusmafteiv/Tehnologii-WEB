@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Viga", sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-color: #E9DCD1;
+    background-size: cover;
+    background-position: center;
+}
+
+header li{
+    list-style: none;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+header .logo{
+    user-select: none;
+}
+
+header{
+    background: #39424A;
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar{
+    width: 100%;
+    max-width: 1200px;
+    height: 3.75em;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.navbar .links{
+    position: relative;
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle-btn{
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* Dropdown Menu */
+
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 3.75em;
+    width: 300px;
+    height: 0;
+    background:rgba(180, 180, 180, .2) ;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown-menu li{
+    padding: .7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-menu .dm-login-btn{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown-menu.open{
+    height: 16em;
+}
+
+/* buttons */
+
+.login-btn{
+    background: #39424A;
+    color: white;
+    outline: none;
+    font-weight: bold;
+    padding: 0.5rem 1.25rem;
+    border-radius: 2em;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.login-btn:hover{
+    background-color: var(--clr);
+    letter-spacing: .05em;
+    box-shadow: 0 0 1em var(--clr);
+}
+
+
+.dm-login-btn{
+    background: #39424A;
+    color: white;
+    outline: none;
+    font-weight: bold;
+    padding: 0.5rem 1.25rem;
+    border-radius: 2em;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.dropdown-menu .dm-login-btn:hover{
+    background-color: var(--clr);
+    letter-spacing: .05em;
+    box-shadow: 0 0 1em var(--clr);
+}
+
+.navbar li a:not(.dm-login-btn):after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: white;
+    margin: auto;
+    display: block;
+    transition: .5s;
+}
+
+.navbar li a:hover:not(.dm-login-btn):after{
+    width: 100%;
+}
+
+.dropdown-menu li a:not(.dm-login-btn){
+    color: #39424A;
+}
+
+.dropdown-menu li a:not(.dm-login-btn):after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: white;
+    margin: auto;
+    display: block;
+    transition: .5s;
+}
+
+.dropdown-menu li a:hover:not(.dm-login-btn):after{
+    width: 100%;
+}
+
+.dropdown-menu li a:hover:not(.dm-login-btn){
+    color: white;
+}
+
+/* Responsive part */
+
+@media (min-width:577px) and (max-width: 992px){
+    .navbar .links,
+    .navbar .login-btn{
+        display: none;
+    }
+
+    .navbar .toggle-btn{
+        display: block;
+    }
+
+    .dropdown-menu{
+        display: block;
+        z-index: 99;
+    }
+}
+
+@media (max-width: 576px){
+    .navbar .links,
+    .navbar .login-btn{
+        display: none;
+    }
+
+    .navbar .toggle-btn{
+        display: block;
+    }
+
+    .dropdown-menu{
+        display: block;
+        z-index: 1;
+    }
+    .dropdown-menu{
+        left: 2rem;
+        width: unset;
+        z-index: 99;
+    }
+
+    /* section#login-reg-form{
+        height: calc(100vh - 60px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    } */
+}
+
+/* selectedProblem CSS */
+
+.big-box {
+    position: absolute;
+    top: 12.5%;
+    left: 10%;
+    right: 10%;
+    bottom: 2%;
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #39424A;
+    border-radius: 1em;
+    width: 80%;
+}
+
+
+.title {
+    font-size: 3vw;
+    font-weight: bold;
+    text-align: center;
+}
+
+.tags {
+    font-size: 2vw;
+    margin-bottom: 2vw;
+    text-align: center;
+}
+
+.small-box {
+    height: 30vh;
+    width: 60vw;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    margin-bottom: 2vw;
+    background-color: #D5CDC6;
+    border-radius: 1em;
+    padding: 1%;
+}
+
+.text-input {
+    height: 15vh;
+    width: 100%;
+    border: 1px solid gray;
+    margin-bottom: 2vw;
+    background-color: #D5CDC6;
+    border-radius: 1em;
+    padding: 1%;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.submit-btn {
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: #39424A;
+    border-radius: 5px;
+}
+
+.author-box {
+    position: absolute;
+    bottom: 2%;
+    left: 2%;
+    display: flex;
+    align-items: center;
+    font-size: 3vw;
+}
+
+.author-image {
+    height: 10vh;
+    width: 9vw;
+    margin-right: 2vw;
+    border-radius: 50%;
+    border: 0.02em solid black;
+}
+
+.author-surname {
+    margin-left: 0.5vw;
+}

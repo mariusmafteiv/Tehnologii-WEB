@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Viga", sans-serif;
+}
+
+body{
+    height: 100vh;
+    background: #E9DCD1;
+}
+
+header li{
+    list-style: none;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+header .logo{
+    user-select: none;
+}
+
+header{
+    background: #39424A;
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar{
+    width: 100%;
+    max-width: 1200px;
+    height: 3.75em;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.navbar .links{
+    position: relative;
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle-btn{
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* Dropdown Menu */
+
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 3.75em;
+    width: 300px;
+    height: 0;
+    background:rgba(180, 180, 180, .2) ;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown-menu li{
+    padding: .7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-menu .dm-login-btn{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown-menu.open{
+    height: 16em;
+}
+
+/* buttons */
+
+.login-btn{
+    background: #39424A;
+    color: white;
+    outline: none;
+    font-weight: bold;
+    padding: 0.5rem 1.25rem;
+    border-radius: 2em;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.login-btn:hover{
+    background-color: var(--clr);
+    letter-spacing: .05em;
+    box-shadow: 0 0 1em var(--clr);
+}
+
+
+.dm-login-btn{
+    background: #39424A;
+    color: white;
+    outline: none;
+    font-weight: bold;
+    padding: 0.5rem 1.25rem;
+    border-radius: 2em;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.dropdown-menu .dm-login-btn:hover{
+    background-color: var(--clr);
+    letter-spacing: .05em;
+    box-shadow: 0 0 1em var(--clr);
+}
+
+.navbar li a:not(.dm-login-btn):after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: white;
+    margin: auto;
+    display: block;
+    transition: .5s;
+}
+
+.navbar li a:hover:not(.dm-login-btn):after{
+    width: 100%;
+}
+
+.dropdown-menu li a:not(.dm-login-btn){
+    color: #39424A;
+}
+
+.dropdown-menu li a:not(.dm-login-btn):after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: white;
+    margin: auto;
+    display: block;
+    transition: .5s;
+}
+
+.dropdown-menu li a:hover:not(.dm-login-btn):after{
+    width: 100%;
+}
+
+.dropdown-menu li a:hover:not(.dm-login-btn){
+    color: white;
+}
+
+/* Profile section */
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 0px 100px 0px 100px;
+    gap: 0.5em;
+}
+
+.upper{
+    display: flex;
+    width: 100%;
+    padding: 1em 0em;
+}
+
+.profile-box{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upper-right{
+    width: 75%;
+    display: flex;
+    justify-content: center;
+}
+
+.profile {
+    float: left;
+    width: 13em;
+    height: 13em;
+
+    background: url(../assets/avatar.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 0.02em solid black;
+    border-radius: 50%;
+}
+
+.content .information-box{
+    position: relative;
+    width: 40em;
+    height: 16em;
+    display: absolute;
+    justify-content: center;
+    align-items: center;
+
+    border: .02em solid black;
+    border-radius: 1em;
+    background: #39424A;
+}
+
+.username{
+    position: absolute;
+}
+
+.information-box h2{
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    margin: 0.5em 1.25em;
+    margin-right: -1em;
+}
+
+
+.details{
+    position: absolute;
+    top: 4.5em;
+}
+
+.information-box h1{
+    padding: 0.4em 1em;
+    font-size: 1.25em;
+    color: white;
+    font-weight: 50;
+    font-family: Arial;
+    justify-content: space-between;
+    user-select: none;
+}
+
+
+.bottom{
+    width: 100%;
+    height: 21em;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+
+    background: #E9DCD1;
+    border: 0.02em solid #39424A;
+    user-select: none;
+
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.bottom::-webkit-scrollbar { 
+    width: 0;
+    height: 0;
+}
+
+.bottom h2{
+    background-size: cover;
+    background-color: #39424A;
+    width: 100%;
+    font-size: 2em;
+    color: white;
+    border-bottom: 0.02em solid #39424A;
+    text-align: center;
+    display: inline-block;
+    position: sticky;
+    top: 0;
+}
+
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.list-item {
+    padding: 1.125em;
+    border-bottom: 1px solid #39424A;
+    display: block;
+}
+
+.list-item:last-child {
+    border-top: 1px solid #39424A;
+    border-bottom: none;
+}
+
+/* Responsive part */
+@media (min-width:577px) and (max-width: 992px){
+    .navbar .links,
+    .navbar .login-btn{
+        display: none;
+    }
+
+    .navbar .toggle-btn{
+        display: block;
+    }
+
+    .dropdown-menu{
+        display: block;
+        z-index: 1;
+    }
+
+    .profile{
+        width: 8em;
+        height: 8em;
+    }
+
+    .information-box h2{
+        font-size: 1.5em;
+    }
+    
+    .upper{
+        padding: 0.4em 0em;;
+    }
+
+    .details{
+        position: absolute;
+        top: 3.5em;
+    }
+    
+    .information-box h1{
+        padding: .3em 1em;
+        font-size: 1em;
+    }
+
+    .content .information-box{
+        width: 30em;
+        height: 12em;
+    }
+}
+
+@media (max-width: 576px){
+    .navbar .links,
+    .navbar .login-btn{
+        display: none;
+    }
+
+    .navbar .toggle-btn{
+        display: block;
+    }
+
+    .dropdown-menu{
+        display: block;
+        z-index: 1;
+    }
+
+    .dropdown-menu{
+        left: 2rem;
+        width: unset;
+        z-index: 2;
+    }
+
+    .upper{
+        display: initial;
+        padding: 0;
+    }
+
+    .profile-box {
+        padding: .3em 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .upper-right {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .profile{
+        width: 8em;
+        height: 8em;
+    }
+
+    .content {
+        padding: 0px 2em 0px 2em;
+        gap: 1em;
+    }
+
+    .information-box h2{
+        font-size: 1.5em;
+    }
+    
+    
+    .details{
+        position: absolute;
+        top: 3.5em;
+    }
+    
+    .information-box h1{
+        padding: .3em 1em;
+        font-size: 1em;
+    }
+
+    .content .information-box{
+        width: 30em;
+        height: 12em;
+    }
+
+    .bottom{
+        height: 14em;
+    }
+
+    /* section#login-reg-form{
+        height: calc(100vh - 60px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    } */
+}
